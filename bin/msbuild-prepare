@@ -1,0 +1,12 @@
+#!/bin/bash
+chmod a+x "$TRAVIS_MSBUILD_BIN"/*
+
+pushd "$TRAVIS_MSBUILD"
+if [ -f 'msbuild/MSBuild.exe' ]; then
+	echo 'MSBuild already existing.'
+else
+	echo 'Unzipping MSBuild...'
+	unzip msbuild.zip
+fi
+popd
+
