@@ -2,6 +2,10 @@
 sudo: required
 dist: trusty
 language: generic
+addons:
+    apt:
+        packages:
+            - libunwind8
 env:
     global:
         # Replace framework with core when you want to build a .NET Core project, not a .NET Framework project.
